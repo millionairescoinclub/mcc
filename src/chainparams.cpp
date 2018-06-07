@@ -103,6 +103,9 @@ public:
 	vSeeds.push_back(CDNSSeedData("0",  "31.220.62.198"));
      vSeeds.push_back(CDNSSeedData("1",  "194.182.84.37"));
      vSeeds.push_back(CDNSSeedData("2",  "194.182.86.227"));
+	vSeeds.push_back(CDNSSeedData("3",  "45.76.35.10"));
+     vSeeds.push_back(CDNSSeedData("4",  "49.28.175.126"));
+     vSeeds.push_back(CDNSSeedData("5",  "140.82.32.211"));
         convertSeeds(vFixedSeeds, pnSeed, ARRAYLEN(pnSeed), nDefaultPort);
 
 
@@ -110,8 +113,8 @@ public:
         //strSporkKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
         //strMasternodePaymentsPubKey = "046f78dcf911fbd61910136f7f0f8d90578f68d0b3ac973b5040fb7afb501b5939f39b108b0569dca71488f5bbf498d92e4d1194f6f941307ffd95f75e76869f0e";
         strDarksendPoolDummyAddress = "M7FBJNGDmEsU5wx2m3xw85N8kRgCqA8S7L";
-        nLastPOWBlock = 2000;
-        nPOSStartBlock = 1500;
+        nLastPOWBlock = 1000;
+        nPOSStartBlock = 100;
     }
 
     virtual const CBlock& GenesisBlock() const { return genesis; }

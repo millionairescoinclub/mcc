@@ -1077,7 +1077,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Unix: ~/.Millionairescoinclub
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "Millionairescoinclub";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "MCC";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1089,10 +1089,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "Millionairescoinclub";
+    return pathRet / "MCC";
 #else
     // Unix
-    return pathRet / ".Millionairescoinclub";
+    return pathRet / ".MCC";
 #endif
 #endif
 }
@@ -1141,7 +1141,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "Millionairescoinclub.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "MCC.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
